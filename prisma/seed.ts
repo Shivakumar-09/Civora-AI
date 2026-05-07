@@ -3,7 +3,7 @@ import { PrismaClient, ElectionType, ElectionStatus } from '@prisma/client'
 const prisma = new PrismaClient()
 
 async function main() {
-  console.log('🌱 Seeding VoteWise AI database...')
+  console.log('🌱 Seeding CivicZen AI database...')
 
   // Clean up
   await prisma.feedback.deleteMany()

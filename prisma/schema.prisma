@@ -132,3 +132,109 @@ enum SupportStatus {
   RESOLVED
   CLOSED
 }
+
+model AiInsight {
+  id          String   @id @default(cuid())
+  title       String
+  content     String
+  category    String   // e.g., "trend", "anomaly", "summary"
+  tags        String[]
+  constituency String?
+  state       String?
+  relevance   Float    @default(1.0)
+  createdAt   DateTime @default(now())
+
+  @@map("ai_insights")
+}
+
+model AiAlert {
+  id          String   @id @default(cuid())
+  type        String   // "misinformation", "turnout_spike", "sentiment_shift"
+  severity    String   // "high", "medium", "low"
+  message     String
+  isRead      Boolean  @default(false)
+  location    String?
+  createdAt   DateTime @default(now())
+
+  @@map("ai_alerts")
+}
+
+model SentimentAnalytics {
+  id          String   @id @default(cuid())
+  topic       String
+  sentiment   Float    // -1.0 to 1.0
+  volume      Int
+  state       String?
+  constituency String?
+  timestamp   DateTime @default(now())
+
+  @@map("sentiment_analytics")
+}
+
+model MisinformationLog {
+  id                 String   @id @default(cuid())
+  claim              String
+  source             String?
+  credibilityScore   Float    // 0.0 to 1.0
+  manipulationProb   Float    // 0.0 to 1.0
+  aiReasoning        String
+  status             String   // "investigating", "debunked", "verified"
+  createdAt          DateTime @default(now())
+
+  @@map("misinformation_logs")
+}
+
+model ConstituencyIntelligence {
+  id            String   @id @default(cuid())
+  constituency  String
+  state         String
+  turnoutPred   Float?   // predicted turnout percentage
+  keyIssues     String[]
+  aiSummary     String
+  lastUpdated   DateTime @default(now()) @updatedAt
+
+  @@unique([constituency, state])
+  @@map("constituency_intelligence")
+}
+
+model MonitoringEvent {
+  id          String   @id @default(cuid())
+  eventType   String   // "scan_completed", "anomaly_detected"
+  description String
+  status      String   // "success", "error", "warning"
+  metrics     Json?    // e.g. {"scannedPosts": 1500, "flagged": 12}
+  timestamp   DateTime @default(now())
+
+  @@map("monitoring_events")
+}
+
+model UploadedDataset {
+  id          String   @id @default(cuid())
+  fileName    String
+  fileSize    Int
+  rowCount    Int
+  columns     String[]
+  status      String   // "processing", "completed", "error"
+  createdAt   DateTime @default(now())
+
+  predictions PredictionResult[]
+
+  @@map("uploaded_datasets")
+}
+
+model PredictionResult {
+  id               String   @id @default(cuid())
+  datasetId        String
+  dataset          UploadedDataset @relation(fields: [datasetId], references: [id])
+  targetVariable   String
+  predictionScore  Float
+  confidence       Float
+  trendDirection   String   // "up", "down", "stable"
+  forecastSummary  String
+  anomalyAlerts    String[]
+  aiExplanation    String
+  chartData        Json?    // Store processed Recharts data
+  createdAt        DateTime @default(now())
+
+  @@map("prediction_results")
+}

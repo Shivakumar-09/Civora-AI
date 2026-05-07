@@ -16,16 +16,20 @@ import {
   Menu,
   X,
   Vote,
-  ChevronRight
+  ChevronRight,
+  Zap,
+  Globe2,
+  TrendingUp
 } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 
 const sidebarItems = [
   { id: "dashboard", icon: LayoutDashboard, href: "/", translationKey: "sidebar.home" },
+  { id: "agentic-dashboard", icon: Zap, href: "/agentic-dashboard", translationKey: "Agentic_dashboard" },
+  { id: "prediction-lab", icon: TrendingUp, href: "/prediction-lab", translationKey: "Prediction Lab" },
+  { id: "heatmap", icon: Globe2, href: "/heatmap", translationKey: "Heatmap" },
   { id: "ai-assistant", icon: Bot, href: "/ai-assistant", translationKey: "sidebar.ai_assistant" },
-  { id: "booth-finder", icon: MapPin, href: "/booth-finder", translationKey: "sidebar.booth_finder" },
   { id: "calendar", icon: Calendar, href: "/calendar", translationKey: "sidebar.election_guide" },
-  { id: "eligibility", icon: CheckCircle, href: "/eligibility", translationKey: "sidebar.eligibility" },
   { id: "registration", icon: BookOpen, href: "/registration", translationKey: "guides.registration" },
   { id: "fake-news", icon: ShieldCheck, href: "/fake-news", translationKey: "sidebar.fake_news" },
   { id: "accessibility", icon: Accessibility, href: "/accessibility", translationKey: "guides.accessibility" },
@@ -54,7 +58,7 @@ export default function Sidebar() {
               <Vote className="w-5 h-5 text-white" />
             </div>
             <span className="font-heading font-bold text-xl text-white">
-              Vote<span className="text-[#F59E0B]">Wise</span>
+              CivicZen<span className="text-[#F59E0B]"> AI</span>
             </span>
           </Link>
         </div>
@@ -114,7 +118,7 @@ export default function Sidebar() {
                 <div className="w-10 h-10 rounded-xl bg-indigo-gradient flex items-center justify-center">
                   <Vote className="w-5 h-5 text-white" />
                 </div>
-                <span className="font-heading font-bold text-xl text-white">VoteWise</span>
+                <span className="font-heading font-bold text-xl text-white">CivicZen AI</span>
               </div>
 
               <nav className="space-y-2">

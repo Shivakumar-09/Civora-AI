@@ -98,7 +98,7 @@ export default function Footer() {
           </p>
           <p className="text-white/30 text-sm flex items-center gap-1.5">
             Made with <Heart className="w-3.5 h-3.5 text-red-400" /> for
-            democracy · © 2025 VoteWise AI
+            democracy · © 2025 CivicZen AI
           </p>
         </div>
       </div>

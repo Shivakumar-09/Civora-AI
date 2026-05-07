@@ -31,7 +31,7 @@
       "What is NOTA?"
     ],
     "fallback_message": "Failed to get AI response. Please try again or call Voter Helpline: 1950",
-    "welcome_message": "👋 Namaste! I'm **VoteWise AI**, your multilingual election assistant.\n\nI can help you with voter registration, finding your booth, understanding candidates, checking eligibility, and much more — in your preferred language.\n\nWhat would you like to know today? 🗳️"
+    "welcome_message": "👋 Namaste! I'm **CivicZen AI**, your multilingual election assistant.\n\nI can help you with voter registration, finding your booth, understanding candidates, checking eligibility, and much more — in your preferred language.\n\nWhat would you like to know today? 🗳️"
   },
   "common": {
     "loading": "Loading...",

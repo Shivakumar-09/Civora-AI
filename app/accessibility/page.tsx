@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Accessibility, Type, Sun, Mic, Keyboard, CheckCircle2 } from "lucide-react";
+import { Accessibility, Type, Sun, Keyboard, CheckCircle2 } from "lucide-react";
 
 const features = [
   {
@@ -19,13 +19,7 @@ const features = [
     description: "Switch to a high-contrast black & white theme for maximum visibility.",
     color: "from-amber-500 to-yellow-600",
   },
-  {
-    id: "voice-mode",
-    icon: Mic,
-    title: "Voice Mode",
-    description: "Use voice commands to interact with the AI assistant hands-free.",
-    color: "from-green-500 to-emerald-600",
-  },
+
   {
     id: "keyboard-nav",
     icon: Keyboard,
@@ -87,7 +81,7 @@ export default function AccessibilityPage() {
             Accessibility <span className="gradient-text">Mode</span>
           </h1>
           <p className="text-white/60 max-w-xl mx-auto">
-            VoteWise AI is built for everyone. Enable the accessibility features
+            CivicZen AI is built for everyone. Enable the accessibility features
             that work best for you.
           </p>
         </div>

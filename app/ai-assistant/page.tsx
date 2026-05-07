@@ -5,8 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Bot,
   Send,
-  Mic,
-  MicOff,
   Volume2,
   VolumeX,
   RefreshCw,
@@ -322,14 +320,6 @@ export default function AIAssistantPage() {
               rows={1}
             />
             <div className="flex items-center gap-2 p-1.5">
-              <button
-                onClick={isListening ? stopListening : startListening}
-                className={`p-3 rounded-xl transition-all ${
-                  isListening ? "bg-red-500 text-white animate-pulse" : "bg-white/10 text-white/40 hover:bg-white/20"
-                }`}
-              >
-                {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
-              </button>
               <button
                 onClick={() => sendMessage()}
                 disabled={!input.trim() || loading}

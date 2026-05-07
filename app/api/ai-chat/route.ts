@@ -15,11 +15,17 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (!process.env.GEMINI_API_KEY) {
-      return NextResponse.json(
-        { response: "AI service is not configured." },
-        { status: 200 }
-      );
+    if (!process.env.GEMINI_API_KEY || process.env.GEMINI_API_KEY === "your-gemini-api-key-here") {
+      const encoder = new TextEncoder();
+      const readableStream = new ReadableStream({
+        start(controller) {
+          controller.enqueue(encoder.encode("Hello! The Gemini API key is missing or invalid. Please configure a valid API key in the .env file to enable AI responses."));
+          controller.close();
+        }
+      });
+      return new Response(readableStream, {
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
+      });
     }
 
     const stream = await streamElectionResponse(

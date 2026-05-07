@@ -43,7 +43,7 @@ export default function Navbar() {
         {/* Mobile Logo Only */}
         <div className="md:hidden flex items-center gap-2">
            <Vote className="w-6 h-6 text-indigo-500" />
-           <span className="font-heading font-bold text-foreground">VoteWise</span>
+           <span className="font-heading font-bold text-foreground">CivicZen AI</span>
         </div>
 
         {/* Desktop Breadcrumb/Context (Optional) */}

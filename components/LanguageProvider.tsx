@@ -42,7 +42,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     // Load from localStorage
-    const savedLang = localStorage.getItem("votewise-lang") as Language;
+    const savedLang = localStorage.getItem("civiczen-lang") as Language;
     if (savedLang && langMap[savedLang]) {
       setLanguageState(savedLang);
     } else {
@@ -59,7 +59,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const langCode = langMap[language];
     const data = allTranslations[langCode] || en;
     setTranslations(data);
-    localStorage.setItem("votewise-lang", language);
+    localStorage.setItem("civiczen-lang", language);
   }, [language]);
 
   const setLanguage = (lang: Language) => {

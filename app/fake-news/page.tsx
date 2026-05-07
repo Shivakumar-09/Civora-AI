@@ -11,7 +11,8 @@ import {
   Loader2,
   ExternalLink,
   Sparkles,
-  Info
+  Info,
+  Bot
 } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 
@@ -20,7 +21,10 @@ type Verdict = "LIKELY_TRUE" | "UNVERIFIED" | "LIKELY_FALSE" | "MISLEADING";
 interface AnalysisResult {
   verdict: Verdict;
   confidence: number;
+  credibilityScore: number;
+  manipulationProb: number;
   explanation: string;
+  aiReasoning: string;
   redFlags: string[];
   officialSources: string[];
 }
@@ -250,6 +254,60 @@ export default function FakeNewsPage() {
                           />
                        </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Advanced Statistics */}
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Advanced Trust Metrics */}
+                <div className="glass-card p-8 border-indigo-500/10 shadow-premium flex flex-col justify-center">
+                  <h3 className="text-indigo-500 font-black text-[11px] uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
+                    <Sparkles className="w-4 h-4" /> AI Confidence Metrics
+                  </h3>
+                  
+                  <div className="space-y-6">
+                    <div>
+                      <div className="flex justify-between text-xs font-bold text-foreground/50 uppercase tracking-widest mb-2">
+                        <span>Credibility Score</span>
+                        <span>{result.credibilityScore}%</span>
+                      </div>
+                      <div className="w-full h-2 bg-foreground/5 rounded-full overflow-hidden">
+                        <motion.div 
+                          initial={{ width: 0 }} 
+                          animate={{ width: `${result.credibilityScore}%` }}
+                          transition={{ duration: 1.5, ease: "easeOut" }}
+                          className="h-full bg-indigo-500"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="flex justify-between text-xs font-bold text-foreground/50 uppercase tracking-widest mb-2">
+                        <span>Manipulation Probability</span>
+                        <span>{result.manipulationProb}%</span>
+                      </div>
+                      <div className="w-full h-2 bg-foreground/5 rounded-full overflow-hidden">
+                        <motion.div 
+                          initial={{ width: 0 }} 
+                          animate={{ width: `${result.manipulationProb}%` }}
+                          transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+                          className="h-full bg-rose-500"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* AI Reasoning Panel */}
+                <div className="glass-card p-8 border-indigo-500/10 shadow-premium">
+                  <h3 className="text-indigo-500 font-black text-[11px] uppercase tracking-[0.2em] mb-4 flex items-center gap-3">
+                    <Bot className="w-4 h-4" /> AI Reasoning
+                  </h3>
+                  <div className="p-4 rounded-xl bg-indigo-500/5 border border-indigo-500/10">
+                    <p className="text-foreground/70 text-sm leading-relaxed italic">
+                      "{result.aiReasoning}"
+                    </p>
                   </div>
                 </div>
               </div>

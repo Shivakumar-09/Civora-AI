@@ -4,8 +4,8 @@ let genAI: GoogleGenerativeAI | null = null;
 
 function getGenAI() {
   const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) {
-    throw new Error('GEMINI_API_KEY is not set in environment variables');
+  if (!apiKey || apiKey === "your-gemini-api-key-here") {
+    throw new Error('GEMINI_API_KEY is not set or is a dummy key in environment variables');
   }
   if (!genAI) {
     genAI = new GoogleGenerativeAI(apiKey);
@@ -13,9 +13,9 @@ function getGenAI() {
   return genAI;
 }
 
-const MODELS_TO_TRY = ['gemini-1.5-flash-8b', 'gemini-1.5-flash', 'gemini-flash-latest'];
+const MODELS_TO_TRY = ['gemini-1.5-flash-latest', 'gemini-1.5-flash', 'gemini-pro', 'gemini-flash-latest'];
 
-export const ELECTION_SYSTEM_PROMPT = `You are VoteWise AI, a fast multilingual election assistant for India.
+export const ELECTION_SYSTEM_PROMPT = `You are CivicZen AI, a fast multilingual election assistant for India.
 Help with registration, booth finding, and candidate info neutrally.
 Cite ECI (1950, voterportal.eci.gov.in) always.
 Keep responses very short and direct.`;
@@ -133,7 +133,10 @@ export async function streamElectionResponse(
 export async function analyzeFakeNews(content: string): Promise<{
   verdict: 'LIKELY_TRUE' | 'UNVERIFIED' | 'LIKELY_FALSE' | 'MISLEADING'
   confidence: number
+  credibilityScore: number
+  manipulationProb: number
   explanation: string
+  aiReasoning: string
   redFlags: string[]
   officialSources: string[]
 }> {
@@ -152,7 +155,10 @@ Respond ONLY with a valid JSON object in this exact format:
 {
   "verdict": "LIKELY_TRUE" | "UNVERIFIED" | "LIKELY_FALSE" | "MISLEADING",
   "confidence": <number 0-100>,
-  "explanation": "<2-3 sentence analysis>",
+  "credibilityScore": <number 0-100>,
+  "manipulationProb": <number 0-100>,
+  "explanation": "<1-2 sentence quick summary>",
+  "aiReasoning": "<Detailed AI breakdown of the claim's logic and manipulation techniques>",
   "redFlags": ["<flag1>", "<flag2>"],
   "officialSources": ["<source1 with URL>", "<source2 with URL>"]
 }
@@ -176,7 +182,10 @@ Be objective, cite official Indian government sources (ECI, PIB, etc.), and be c
   return {
     verdict: 'UNVERIFIED',
     confidence: 50,
-    explanation: 'AI analysis service is currently under high load. Please check official ECI sources manually.',
+    credibilityScore: 50,
+    manipulationProb: 50,
+    explanation: 'AI analysis service is currently under high load.',
+    aiReasoning: 'Unable to perform deep analysis due to system load. Please verify with official sources.',
     redFlags: ['Service high demand'],
     officialSources: ['https://www.eci.gov.in', 'https://pib.gov.in'],
   };

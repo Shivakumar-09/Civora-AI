@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { LanguageProvider } from "@/components/LanguageProvider";
+import Sidebar from "@/components/Sidebar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,7 +20,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "VoteWise AI — Democracy Should Be Understood in Every Language",
+  title: "CivicZen AI — Democracy Should Be Understood in Every Language",
   description:
     "India's premier multilingual AI-powered election assistance platform. Check eligibility, find polling booths, compare candidates, detect fake news, and get instant civic help in 8 languages.",
   keywords: [
@@ -32,18 +34,18 @@ export const metadata: Metadata = {
     "AI",
     "civic tech",
   ],
-  authors: [{ name: "VoteWise AI Team" }],
+  authors: [{ name: "CivicZen AI Team" }],
   openGraph: {
-    title: "VoteWise AI — Democracy Should Be Understood in Every Language",
+    title: "CivicZen AI — Democracy Should Be Understood in Every Language",
     description:
       "Multilingual AI-powered election assistance for every Indian citizen.",
     type: "website",
     locale: "en_IN",
-    siteName: "VoteWise AI",
+    siteName: "CivicZen AI",
   },
   twitter: {
     card: "summary_large_image",
-    title: "VoteWise AI",
+    title: "CivicZen AI",
     description:
       "Multilingual AI-powered election assistance for every Indian citizen.",
   },
@@ -52,9 +54,6 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
-
-import { LanguageProvider } from "@/components/LanguageProvider";
-import Sidebar from "@/components/Sidebar";
 
 export default function RootLayout({
   children,

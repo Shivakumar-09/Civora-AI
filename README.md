@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>VoteWise AI 🗳️</h1>
+  <h1>CivicZen AI 🗳️</h1>
   <p><strong>Democracy should be understood in every language.</strong></p>
   <p>India's premier multilingual AI-powered election assistance platform — helping every citizen understand elections, check eligibility, register to vote, find polling booths, compare candidates, and detect fake news.</p>
   
@@ -36,7 +36,7 @@
 
 ## 🚀 Extreme Performance Optimizations
 
-VoteWise AI is built to be blazing fast, even on slow mobile networks:
+CivicZen AI is built to be blazing fast, even on slow mobile networks:
 - **Next.js Package Optimization:** Strict barrel-file tree-shaking for `lucide-react` and `framer-motion` via `next.config.ts`, slashing JavaScript bundle sizes.
 - **Resource Pre-connections:** `<link rel="preconnect">` tags for Google Fonts and Maps establish early TLS connections, cutting down latency.
 - **Lazy Loading & Memory Management:** Heavy elements like Google Maps are strictly lazy-loaded. Database connection pools are memoized globally to prevent PostgreSQL exhaustion during high traffic.
@@ -62,8 +62,8 @@ VoteWise AI is built to be blazing fast, even on slow mobile networks:
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/Shivakumar-09/VoteWise.git
-cd VoteWise
+git clone https://github.com/Shivakumar-09/CivicZen.git
+cd CivicZen
 npm install
 ```
 
@@ -123,4 +123,4 @@ Built for the **Civic Tech / AI for Public Good** category.
 
 MIT License — see [LICENSE](LICENSE) file.
 
-> ⚠️ *VoteWise AI is an independent Civic Tech platform and is NOT officially affiliated with the Election Commission of India. Always verify critical election data at official ECI sources.*
+> ⚠️ *CivicZen AI is an independent Civic Tech platform and is NOT officially affiliated with the Election Commission of India. Always verify critical election data at official ECI sources.*

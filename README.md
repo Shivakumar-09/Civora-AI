@@ -1,126 +1,215 @@
 <div align="center">
-  <h1>CivicZen AI 🗳️</h1>
-  <p><strong>Democracy should be understood in every language.</strong></p>
-  <p>India's premier multilingual AI-powered election assistance platform — helping every citizen understand elections, check eligibility, register to vote, find polling booths, compare candidates, and detect fake news.</p>
-  
-  [![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel&style=for-the-badge)](https://vercel.com)
-  [![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js&style=for-the-badge)](https://nextjs.org)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white&style=for-the-badge)](https://tailwindcss.com/)
-  [![Prisma](https://img.shields.io/badge/Prisma-3982CE?logo=Prisma&logoColor=white&style=for-the-badge)](https://prisma.io/)
+
+# 🗳️ CivicZen AI
+
+### Democracy Should Be Understood In Every Language
+
+<img src="./public/preview.png" alt="CivicZen AI Banner" width="100%" />
+
+<br/>
+
+### 🇮🇳 India's Next-Generation Multilingual Election Intelligence Platform
+
+CivicZen AI empowers every Indian citizen with AI-driven election guidance, voter awareness, misinformation detection, candidate intelligence, accessibility tools, and multilingual civic education.
+
+Built to make democracy more transparent, accessible, and understandable for everyone.
+
+<br/>
+
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma)
+![Gemini AI](https://img.shields.io/badge/Gemini-AI-8E75FF?style=for-the-badge&logo=google)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel)
+
 </div>
 
-<br />
+---
+
+# 🚀 Overview
+
+CivicZen AI is an advanced AI-powered election assistance ecosystem designed for Indian citizens.
+
+The platform combines:
+- 🧠 AI intelligence
+- 🌍 Multilingual accessibility
+- 📍 Real-time election utilities
+- 📰 Fake news verification
+- 🗳️ Voter assistance
+- 📊 Election analytics
+- ♿ Accessibility-first design
+
+to create a single civic platform that simplifies democratic participation.
 
 ---
 
-## ✨ Core Features
+# ✨ Key Features
 
-| Feature | Description |
+## 🤖 AI Election Assistant
+
+An intelligent multilingual assistant powered by Google Gemini that helps users:
+- Understand election processes
+- Learn voting procedures
+- Get voter registration guidance
+- Resolve election-related doubts
+- Access simplified explanations in native languages
+
+---
+
+## 🌐 Multilingual Experience
+
+Supports major Indian languages including:
+
+- English
+- हिन्दी
+- తెలుగు
+- தமிழ்
+- ಕನ್ನಡ
+- বাংলা
+- मराठी
+- اردو
+
+Designed for inclusive democratic participation across India.
+
+---
+
+## 📍 Smart Polling Booth Finder
+
+Locate nearby polling booths using:
+- GPS integration
+- Google Maps APIs
+- Real-time distance calculation
+- Haversine algorithm
+- Interactive navigation support
+
+---
+
+## 🔍 AI Fake News Detector
+
+Fight misinformation during elections using AI-powered verification.
+
+Users can:
+- Paste WhatsApp forwards
+- Analyze viral claims
+- Detect manipulated narratives
+- Verify political misinformation
+- Receive trust scoring and fact analysis
+
+---
+
+## ⚖️ Candidate Comparison System
+
+Compare candidates intelligently with:
+- Educational qualifications
+- Criminal records
+- Financial assets
+- Political background
+- Public data summaries
+
+Designed to encourage informed voting.
+
+---
+
+## 🧠 Prediction Lab
+
+Interactive election analytics dashboard featuring:
+- Trend visualizations
+- Public sentiment indicators
+- Election simulations
+- Heatmaps
+- Engagement statistics
+
+---
+
+## ♿ Accessibility Mode
+
+Built for everyone with:
+- High contrast UI
+- Large readable typography
+- Simplified navigation
+- Mobile-first responsiveness
+- Accessibility-first design patterns
+
+---
+
+# 🧩 Platform Modules
+
+| Module | Purpose |
 |---|---|
-| 🤖 **Multilingual AI Assistant** | Instant, accurate election guidance powered by Google Gemini in **8 Indian languages**. |
-| 📍 **Smart Polling Booth Finder** | GPS-enabled map search. Uses the **Haversine formula** to calculate precise distances and travel times to your nearest booth. |
-| 🔍 **AI Fake News Detector** | Combat election misinformation. Paste any WhatsApp forward or news snippet, and the AI verifies it against official sources. |
-| ✅ **Eligibility Checker** | Real-time voter eligibility verification with personalized next-step guides. |
-| ⚖️ **Candidate Comparison** | Unbiased side-by-side comparison of candidates' assets, criminal records, and educational backgrounds. |
-| 📅 **Live Election Calendar** | Track critical election dates, polling phases, and results. |
-| 📝 **Registration Guide** | Step-by-step documentation for new voter registration, corrections, and address updates. |
-| ♿ **Accessibility First** | Designed with high contrast, large typography, and simple navigation for all age groups. |
+| 🏠 Home | Main multilingual civic portal |
+| 🤖 AI Assistant | Election guidance chatbot |
+| 📍 Election Guide | Step-by-step election help |
+| 📰 Fake News Detector | AI misinformation analysis |
+| 📊 Prediction Lab | Election analytics & trends |
+| 🌡️ Heatmap | Election activity visualization |
+| 📝 Registration Guide | Voter registration walkthrough |
+| ♿ Accessibility Mode | Inclusive UI support |
 
 ---
 
-## 🌐 8 Languages Supported
-*Our mission is to break the language barrier in civic participation.*
-> **English · हिन्दी (Hindi) · తెలుగు (Telugu) · தமிழ் (Tamil) · ಕನ್ನಡ (Kannada) · मराठी (Marathi) · বাংলা (Bengali) · اردو (Urdu)**
+# ⚡ Advanced Performance Optimizations
+
+CivicZen AI is engineered for speed and scalability.
+
+### ✅ Optimization Highlights
+
+- Next.js App Router architecture
+- Lazy-loaded heavy components
+- Dynamic imports for maps & charts
+- Optimized Google Fonts loading
+- Intelligent API caching
+- Memoized Prisma database connections
+- Reduced bundle size with tree-shaking
+- GPU-accelerated animations
+- Mobile-first rendering strategy
 
 ---
 
-## 🚀 Extreme Performance Optimizations
+# 🛠️ Tech Stack
 
-CivicZen AI is built to be blazing fast, even on slow mobile networks:
-- **Next.js Package Optimization:** Strict barrel-file tree-shaking for `lucide-react` and `framer-motion` via `next.config.ts`, slashing JavaScript bundle sizes.
-- **Resource Pre-connections:** `<link rel="preconnect">` tags for Google Fonts and Maps establish early TLS connections, cutting down latency.
-- **Lazy Loading & Memory Management:** Heavy elements like Google Maps are strictly lazy-loaded. Database connection pools are memoized globally to prevent PostgreSQL exhaustion during high traffic.
-- **Smart Fallbacks:** If the database is unreachable, the system intelligently falls back to simulated dynamic coordinates to ensure the app never crashes.
+## Frontend
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+## Backend
+- Next.js API Routes
+- Serverless Functions
+
+## Database
+- PostgreSQL
+- Prisma ORM
+
+## AI & Intelligence
+- Google Gemini API
+- NLP-powered misinformation detection
+
+## Maps & Location
+- Google Maps API
+- Geolocation APIs
+
+## Deployment
+- Vercel
 
 ---
 
-## 🛠️ Tech Stack
+# 📂 Project Structure
 
-- **Frontend**: Next.js (App Router) · TypeScript · Tailwind CSS · Framer Motion
-- **Backend**: Next.js API Routes (Serverless) 
-- **Database**: PostgreSQL (Render) via Prisma ORM 7 (`@prisma/adapter-pg`)
-- **AI Intelligence**: Google Gemini 1.5 Flash (Low latency, high accuracy)
-
----
-
-## 💻 Local Development
-
-### Prerequisites
-- Node.js 18+
-- PostgreSQL database
-- Google Gemini API key
-
-### 1. Clone & Install
 ```bash
-git clone https://github.com/Shivakumar-09/CivicZen.git
-cd CivicZen
-npm install
-```
-
-### 2. Configure Environment
-Create a `.env` file in the root directory:
-```env
-DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?sslmode=require"
-GEMINI_API_KEY="your-gemini-api-key"
-NEXT_PUBLIC_APP_URL="http://localhost:3000"
-NEXT_PUBLIC_GOOGLE_MAPS_API_KEY="your-google-maps-key-here"
-```
-
-### 3. Database Initialization
-```bash
-# Push schema to your database
-npm run db:push
-
-# Seed the database with official data
-npm run db:seed
-```
-
-### 4. Run the App
-```bash
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
----
-
-## ☁️ One-Click Deployment (Vercel)
-
-This project is fully optimized for Vercel deployment with automated database generation.
-
-1. Push your code to GitHub.
-2. Go to [Vercel.com](https://vercel.com) and import the repository.
-3. Add the **Environment Variables** (`DATABASE_URL`, `GEMINI_API_KEY`, etc.).
-4. Click **Deploy**. 
-*(The custom `postinstall: "prisma generate"` script in `package.json` ensures your database connects perfectly during the build phase.)*
-
----
-
-## 📞 Official Civic Resources
-*   **National Voter Helpline**: `1950` (Toll-free)
-*   **ECI Official Website**: [eci.gov.in](https://www.eci.gov.in)
-*   **Voter Portal**: [voters.eci.gov.in](https://voters.eci.gov.in)
-
----
-
-## 🏆 Hackathon Context
-
-Built for the **Civic Tech / AI for Public Good** category.
-**Mission**: Make democratic participation accessible to every Indian citizen, regardless of language, literacy, or technical ability, while actively combating the spread of election misinformation.
-
----
-
-## 📄 License & Disclaimer
-
-MIT License — see [LICENSE](LICENSE) file.
-
-> ⚠️ *CivicZen AI is an independent Civic Tech platform and is NOT officially affiliated with the Election Commission of India. Always verify critical election data at official ECI sources.*
+CivicZen/
+│
+├── app/
+├── components/
+├── lib/
+├── prisma/
+├── public/
+├── styles/
+├── hooks/
+├── services/
+├── utils/
+├── types/
+├── api/
+└── middleware/

@@ -4,8 +4,6 @@
 
 ### Democracy Should Be Understood In Every Language
 
-<img src="./public/preview.png" alt="CivicZen AI Banner" width="100%" />
-
 <br/>
 
 ### 🇮🇳 India's Next-Generation Multilingual Election Intelligence Platform
